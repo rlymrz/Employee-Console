@@ -5,18 +5,18 @@ class Employee {
 	private int id;
 	private String name;
 	private String address;
-	private float contact;
-    private String email;
-    private String job_position;
+	private long contact;
+        private String email;
+        private String job_position;
 	private double rate;
 	
-	public Employee(final int id, final String name, final String address, final int contact, final String email, final String job_position, final double rate) {
+	public Employee(final int id, final String name, final String address, final long contact, final String email, final String job_position, final double rate) {
 		this.id = id;
 		this.name = ucfirst(name);
 		this.address = ucfirst(address);
-        this.contact = contact;
-        this.email = ucfirst(email);
-        this.job_position = ucfirst(job_position);
+                this.contact = contact;
+                this.email = ucfirst(email);
+                this.job_position = ucfirst(job_position);
 		this.rate = rate;
 	}
 
@@ -28,7 +28,7 @@ class Employee {
 		this.address = ucfirst(address);
 	}
 
-	public void setContact(final int contact) {
+	public void setContact(final long contact) {
 		this.contact = contact;
 	}
 
@@ -54,19 +54,19 @@ class Employee {
 
 	public String getAddress() {
     	return address;
-    }
+        }
 
-     public float getContact() {
+        public long getContact() {
     	return contact;
-    }
+        }
 
-     public String getEmail() {
+        public String getEmail() {
     	return email;
-    }
+        }
 
-     public String getJobPosition() {
+        public String getJobPosition() {
     	return job_position;
-    }
+        }
 
 	public double getRate() {
 		return rate;
@@ -147,7 +147,7 @@ class Test {
         final String address = scan.nextLine();
 
         System.out.print("Enter Contact: ");
-        final int contact = Integer.parseInt(scan.nextLine());
+        final long contact = Long.parseLong(scan.nextLine());
 
         System.out.println("Enter Email: ");
         final String email = scan.nextLine();
@@ -178,7 +178,7 @@ class Test {
 		switch(option) {
 			case 1: employee.setName(update); break;
 			case 2: employee.setAddress(update); break;
-			case 3: employee.setContact(Integer.parseInt(update)); break;
+			case 3: employee.setContact(Long.parseLong(update)); break;
 			case 4: employee.setEmail(update); break;
 			case 5: employee.setJobPosition(update); break;
 			case 6: employee.setRate(Double.parseDouble(update)); break;
